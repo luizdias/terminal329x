@@ -10,16 +10,35 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var npcMessage: UILabel!
+    @IBOutlet weak var playerMessage: UILabel!
+    
+    @IBOutlet weak var firstAnswerButton: UIButton!
+    @IBOutlet weak var secondAnswerButton: UIButton!
+    
+    @IBAction func firstActionButton(sender: UIButton) {
+        self.playerMessage.text = "Yes. I’m a machine. And you’re not? #PARTIU-PIZZA 🍕"
+    }
+    
+    @IBAction func secondActionButton(sender: UIButton) {
+        self.playerMessage.text = "No. I’m not. I’m actually talking to you."
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        npcMessage.font = UIFont(name: "Monaco", size: 16)
+        playerMessage.font = UIFont(name: "Monaco", size: 16)
+        
+        view.backgroundColor = UIColor.grayColor()
+        
+        self.playerMessage.text = ""
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 

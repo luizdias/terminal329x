@@ -14,6 +14,11 @@
 		4B4ECB201CF0FA0D0083B8C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4ECB1E1CF0FA0D0083B8C7 /* LaunchScreen.storyboard */; };
 		4B4ECB2B1CF0FA0D0083B8C7 /* terminal329xTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4ECB2A1CF0FA0D0083B8C7 /* terminal329xTests.swift */; };
 		4B4ECB361CF0FA0D0083B8C7 /* terminal329xUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4ECB351CF0FA0D0083B8C7 /* terminal329xUITests.swift */; };
+		4B4ECB461CF111ED0083B8C7 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4ECB441CF111ED0083B8C7 /* bg.png */; };
+		4B4ECB471CF111ED0083B8C7 /* logo-only-for-splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4ECB451CF111ED0083B8C7 /* logo-only-for-splashscreen.png */; };
+		4B4ECB4D1CF11A6F0083B8C7 /* hiphen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4ECB4C1CF11A6F0083B8C7 /* hiphen.png */; };
+		4B4ECB521CF12A1F0083B8C7 /* Monaco.dfont in Resources */ = {isa = PBXBuildFile; fileRef = 4B4ECB4E1CF1203A0083B8C7 /* Monaco.dfont */; };
+		4B4ECB541CF12AD10083B8C7 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4ECB531CF12AD10083B8C7 /* button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4B4ECB121CF0FA0D0083B8C7 /* terminal329x.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = terminal329x.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B4ECB121CF0FA0D0083B8C7 /* Terminal 329X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Terminal 329X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4ECB151CF0FA0D0083B8C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B4ECB171CF0FA0D0083B8C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B4ECB1A1CF0FA0D0083B8C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		4B4ECB311CF0FA0D0083B8C7 /* terminal329xUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = terminal329xUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4ECB351CF0FA0D0083B8C7 /* terminal329xUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = terminal329xUITests.swift; sourceTree = "<group>"; };
 		4B4ECB371CF0FA0D0083B8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B4ECB441CF111ED0083B8C7 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		4B4ECB451CF111ED0083B8C7 /* logo-only-for-splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-only-for-splashscreen.png"; sourceTree = "<group>"; };
+		4B4ECB4C1CF11A6F0083B8C7 /* hiphen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hiphen.png; sourceTree = "<group>"; };
+		4B4ECB4E1CF1203A0083B8C7 /* Monaco.dfont */ = {isa = PBXFileReference; lastKnownFileType = file; path = Monaco.dfont; sourceTree = "<group>"; };
+		4B4ECB531CF12AD10083B8C7 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +97,7 @@
 		4B4ECB131CF0FA0D0083B8C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B4ECB121CF0FA0D0083B8C7 /* terminal329x.app */,
+				4B4ECB121CF0FA0D0083B8C7 /* Terminal 329X.app */,
 				4B4ECB261CF0FA0D0083B8C7 /* terminal329xTests.xctest */,
 				4B4ECB311CF0FA0D0083B8C7 /* terminal329xUITests.xctest */,
 			);
@@ -97,12 +107,14 @@
 		4B4ECB141CF0FA0D0083B8C7 /* terminal329x */ = {
 			isa = PBXGroup;
 			children = (
+				4B4ECB431CF111DC0083B8C7 /* assets */,
 				4B4ECB151CF0FA0D0083B8C7 /* AppDelegate.swift */,
 				4B4ECB171CF0FA0D0083B8C7 /* ViewController.swift */,
 				4B4ECB191CF0FA0D0083B8C7 /* Main.storyboard */,
 				4B4ECB1C1CF0FA0D0083B8C7 /* Assets.xcassets */,
 				4B4ECB1E1CF0FA0D0083B8C7 /* LaunchScreen.storyboard */,
 				4B4ECB211CF0FA0D0083B8C7 /* Info.plist */,
+				4B4ECB4F1CF120500083B8C7 /* Supporting Files */,
 			);
 			path = terminal329x;
 			sourceTree = "<group>";
@@ -125,12 +137,31 @@
 			path = terminal329xUITests;
 			sourceTree = "<group>";
 		};
+		4B4ECB431CF111DC0083B8C7 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				4B4ECB531CF12AD10083B8C7 /* button.png */,
+				4B4ECB4C1CF11A6F0083B8C7 /* hiphen.png */,
+				4B4ECB441CF111ED0083B8C7 /* bg.png */,
+				4B4ECB451CF111ED0083B8C7 /* logo-only-for-splashscreen.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		4B4ECB4F1CF120500083B8C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B4ECB4E1CF1203A0083B8C7 /* Monaco.dfont */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B4ECB111CF0FA0D0083B8C7 /* terminal329x */ = {
+		4B4ECB111CF0FA0D0083B8C7 /* Terminal 329X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B4ECB3A1CF0FA0D0083B8C7 /* Build configuration list for PBXNativeTarget "terminal329x" */;
+			buildConfigurationList = 4B4ECB3A1CF0FA0D0083B8C7 /* Build configuration list for PBXNativeTarget "Terminal 329X" */;
 			buildPhases = (
 				4B4ECB0E1CF0FA0D0083B8C7 /* Sources */,
 				4B4ECB0F1CF0FA0D0083B8C7 /* Frameworks */,
@@ -140,9 +171,9 @@
 			);
 			dependencies = (
 			);
-			name = terminal329x;
+			name = "Terminal 329X";
 			productName = terminal329x;
-			productReference = 4B4ECB121CF0FA0D0083B8C7 /* terminal329x.app */;
+			productReference = 4B4ECB121CF0FA0D0083B8C7 /* Terminal 329X.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4B4ECB251CF0FA0D0083B8C7 /* terminal329xTests */ = {
@@ -217,7 +248,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B4ECB111CF0FA0D0083B8C7 /* terminal329x */,
+				4B4ECB111CF0FA0D0083B8C7 /* Terminal 329X */,
 				4B4ECB251CF0FA0D0083B8C7 /* terminal329xTests */,
 				4B4ECB301CF0FA0D0083B8C7 /* terminal329xUITests */,
 			);
@@ -230,7 +261,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4ECB201CF0FA0D0083B8C7 /* LaunchScreen.storyboard in Resources */,
+				4B4ECB541CF12AD10083B8C7 /* button.png in Resources */,
+				4B4ECB521CF12A1F0083B8C7 /* Monaco.dfont in Resources */,
+				4B4ECB471CF111ED0083B8C7 /* logo-only-for-splashscreen.png in Resources */,
 				4B4ECB1D1CF0FA0D0083B8C7 /* Assets.xcassets in Resources */,
+				4B4ECB4D1CF11A6F0083B8C7 /* hiphen.png in Resources */,
+				4B4ECB461CF111ED0083B8C7 /* bg.png in Resources */,
 				4B4ECB1B1CF0FA0D0083B8C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,12 +318,12 @@
 /* Begin PBXTargetDependency section */
 		4B4ECB281CF0FA0D0083B8C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4B4ECB111CF0FA0D0083B8C7 /* terminal329x */;
+			target = 4B4ECB111CF0FA0D0083B8C7 /* Terminal 329X */;
 			targetProxy = 4B4ECB271CF0FA0D0083B8C7 /* PBXContainerItemProxy */;
 		};
 		4B4ECB331CF0FA0D0083B8C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4B4ECB111CF0FA0D0083B8C7 /* terminal329x */;
+			target = 4B4ECB111CF0FA0D0083B8C7 /* Terminal 329X */;
 			targetProxy = 4B4ECB321CF0FA0D0083B8C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -405,6 +441,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.btl.terminal329x;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -416,6 +453,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.btl.terminal329x;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -477,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B4ECB3A1CF0FA0D0083B8C7 /* Build configuration list for PBXNativeTarget "terminal329x" */ = {
+		4B4ECB3A1CF0FA0D0083B8C7 /* Build configuration list for PBXNativeTarget "Terminal 329X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B4ECB3B1CF0FA0D0083B8C7 /* Debug */,

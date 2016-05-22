@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +15,39 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="0pP-kC-zxv">
+                                <rect key="frame" x="-4" y="20" width="383" height="647"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-only-for-splashscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="RyZ-kc-vp6">
+                                <rect key="frame" x="44" y="280" width="286" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="Ujv-Sx-EIW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0pP-kC-zxv" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="GWD-rZ-Ald"/>
+                            <constraint firstItem="RyZ-kc-vp6" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="260" id="Pfk-jv-R5d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0pP-kC-zxv" secondAttribute="trailing" constant="-20" id="R7w-2d-AOc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RyZ-kc-vp6" secondAttribute="trailing" constant="29" id="hfx-JO-l8w"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="0pP-kC-zxv" secondAttribute="bottom" id="jvc-nz-awW"/>
+                            <constraint firstItem="0pP-kC-zxv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="qMU-WL-Mab"/>
+                            <constraint firstItem="RyZ-kc-vp6" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="28" id="yWo-hz-9S5"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="374.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg.png" width="750" height="1340"/>
+        <image name="logo-only-for-splashscreen.png" width="694" height="92"/>
+    </resources>
 </document>
