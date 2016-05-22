@@ -91,7 +91,8 @@
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">TTTesting keyboard. 123 OMGIs this piece of junk really working?</string>
+                                        <string key="content">TTTesting keyboard. 123 OMG
+Is this piece of junk really working?</string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.69803921568627447" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="Monaco"/>
@@ -107,7 +108,7 @@
                                     <constraint firstAttribute="height" constant="52" id="uH6-JA-Kwi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Monaco" family="Monaco" pointSize="15"/>
-                                <state key="normal" title="No. I’m not. I’m actually talking to you." backgroundImage="button.png">
+                                <state key="normal" title="PLACEHOLDER 2" backgroundImage="button.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -120,7 +121,7 @@
                                     <constraint firstAttribute="height" constant="52" id="x41-Ez-eQl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Monaco" family="Monaco" pointSize="15"/>
-                                <state key="normal" title="Yes. I’m a machine. And you’re not?" backgroundImage="button.png">
+                                <state key="normal" title="PLACEHOLDER 1" backgroundImage="button.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

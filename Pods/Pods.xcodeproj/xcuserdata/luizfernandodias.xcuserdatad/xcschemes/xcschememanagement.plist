@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Terminal 329X.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RUSwiftTypewriterLabel-RUSwiftTypewriterLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RUSwiftTypewriterLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1C58209F27F36BE0970457F9C94D91CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A7663E74916E72071DF392988A7A9B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC30D106FBE00CCA930C94BAE6B434D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CCDE2337AAA98B38B54C532AAF38BE37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

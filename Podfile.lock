@@ -1,0 +1,24 @@
+PODS:
+  - RUSwiftTypewriterLabel (0.2.1)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - RUSwiftTypewriterLabel
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  RUSwiftTypewriterLabel: 09e3d615a62f8102f2ebaac562474edcc0868074
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: 302c9e1e00e56adb66f98f5f6ea529c414b8a98a
+
+COCOAPODS: 1.0.0

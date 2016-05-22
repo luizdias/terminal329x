@@ -1,0 +1,6 @@
+framework module Pods_Terminal_329X {
+  umbrella header "Pods-Terminal 329X-umbrella.h"
+
+  export *
+  module * { export * }
+}
