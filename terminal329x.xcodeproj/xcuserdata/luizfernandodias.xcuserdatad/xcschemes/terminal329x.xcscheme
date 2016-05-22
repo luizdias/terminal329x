@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4B4ECB111CF0FA0D0083B8C7"
-               BuildableName = "Terminal 329X.app"
-               BlueprintName = "Terminal 329X"
+               BuildableName = "329X Terminal.app"
+               BlueprintName = "329X Terminal"
                ReferencedContainer = "container:terminal329x.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -53,8 +53,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B4ECB111CF0FA0D0083B8C7"
-            BuildableName = "Terminal 329X.app"
-            BlueprintName = "Terminal 329X"
+            BuildableName = "329X Terminal.app"
+            BlueprintName = "329X Terminal"
             ReferencedContainer = "container:terminal329x.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B4ECB111CF0FA0D0083B8C7"
-            BuildableName = "Terminal 329X.app"
-            BlueprintName = "Terminal 329X"
+            BuildableName = "329X Terminal.app"
+            BlueprintName = "329X Terminal"
             ReferencedContainer = "container:terminal329x.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,8 +95,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4B4ECB111CF0FA0D0083B8C7"
-            BuildableName = "Terminal 329X.app"
-            BlueprintName = "Terminal 329X"
+            BuildableName = "329X Terminal.app"
+            BlueprintName = "329X Terminal"
             ReferencedContainer = "container:terminal329x.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

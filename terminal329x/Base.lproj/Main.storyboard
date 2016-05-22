@@ -10,13 +10,14 @@
         <mutableArray key="Monaco.dfont">
             <string>Monaco</string>
             <string>Monaco</string>
+            <string>Monaco</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Terminal_329X" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="_29X_Terminal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -107,7 +108,7 @@ Is this piece of junk really working?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="uH6-JA-Kwi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Monaco" family="Monaco" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Monaco" family="Monaco" pointSize="12"/>
                                 <state key="normal" title="PLACEHOLDER 2" backgroundImage="button.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -120,7 +121,7 @@ Is this piece of junk really working?</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="x41-Ez-eQl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Monaco" family="Monaco" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Monaco" family="Monaco" pointSize="12"/>
                                 <state key="normal" title="PLACEHOLDER 1" backgroundImage="button.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -144,6 +145,19 @@ Is this piece of junk really working?</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irc-ma-zTu">
+                                <rect key="frame" x="20" y="408" width="560" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Ruv-dZ-VOe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Monaco" family="Monaco" pointSize="15"/>
+                                <state key="normal" title="Next &gt;" backgroundImage="button.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7dH-wE-dRq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -158,6 +172,8 @@ Is this piece of junk really working?</string>
                             <constraint firstItem="kK0-x0-6KN" firstAttribute="firstBaseline" secondItem="Wdx-Sf-IRQ" secondAttribute="firstBaseline" id="HHw-s5-4eW"/>
                             <constraint firstItem="qjw-zV-q2E" firstAttribute="top" secondItem="qDW-mA-ahy" secondAttribute="bottom" constant="8" id="KzZ-oq-N6B"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mLc-Bk-fMQ" secondAttribute="bottom" constant="20" id="Ma7-Uc-rLY"/>
+                            <constraint firstItem="8wV-i3-eZP" firstAttribute="top" secondItem="Irc-ma-zTu" secondAttribute="bottom" constant="8" id="RM0-kO-pHj"/>
+                            <constraint firstItem="Irc-ma-zTu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="U2w-q9-sd9"/>
                             <constraint firstItem="kK0-x0-6KN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UXl-2j-rk6"/>
                             <constraint firstItem="mLc-Bk-fMQ" firstAttribute="top" secondItem="8wV-i3-eZP" secondAttribute="bottom" constant="8" id="Wjs-1o-qR2"/>
                             <constraint firstItem="8wV-i3-eZP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XWT-Cm-f4R"/>
@@ -166,6 +182,7 @@ Is this piece of junk really working?</string>
                             <constraint firstItem="qDW-mA-ahy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aiL-5g-vQT"/>
                             <constraint firstItem="mLc-Bk-fMQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="m8L-WM-0tt"/>
                             <constraint firstItem="qjw-zV-q2E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mEg-CC-6YF"/>
+                            <constraint firstItem="Irc-ma-zTu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mba-ml-wsU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uxw-Sa-8ka" secondAttribute="trailing" constant="-20" id="pec-83-SHJ"/>
                             <constraint firstItem="Uxw-Sa-8ka" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="puE-fz-xgO"/>
                             <constraint firstItem="SmI-Hx-P13" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qRM-v1-vpU"/>
@@ -177,10 +194,14 @@ Is this piece of junk really working?</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="connectedLabel" destination="kK0-x0-6KN" id="m1N-zf-7rX"/>
                         <outlet property="firstAnswerButton" destination="8wV-i3-eZP" id="SWh-4c-uj0"/>
+                        <outlet property="gameNameLabel" destination="q7K-jK-fRY" id="B1Y-Ft-5qI"/>
+                        <outlet property="nextButton" destination="Irc-ma-zTu" id="AKa-Pz-Sht"/>
                         <outlet property="npcMessage" destination="qjw-zV-q2E" id="Kd8-tT-B0O"/>
                         <outlet property="playerMessage" destination="SmI-Hx-P13" id="zXb-Up-i4Y"/>
                         <outlet property="secondAnswerButton" destination="mLc-Bk-fMQ" id="jGi-QH-iRt"/>
+                        <outlet property="statusLabel" destination="Wdx-Sf-IRQ" id="Tpg-Xe-mld"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -17,49 +17,68 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstAnswerButton: UIButton!
     @IBOutlet weak var secondAnswerButton: UIButton!
+    @IBOutlet weak var connectedLabel: UILabel!
+    @IBOutlet weak var gameNameLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
     
     let typeSpeed = 0.08
     var saveState = 0
+//    print("The savestate is now= \(saveState)")
     
     var story:JSON = JSON.null
     
+    @IBAction func nextActionButton(sender: UIButton) {
+        reNew()
+    }
     @IBAction func firstActionButton(sender: UIButton) {
-        let message = getFirstButtonMessage()
-        let mutableString = generateMutableAttributedString(message)
+        let mutableString = generateMutableAttributedString(getFirstButtonMessage().message)
+        saveState = getFirstButtonMessage().action
+        print("saveState=\(saveState)")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(saveState, forKey: "saveState")
         startTyping(mutableString, typeSpeed: typeSpeed, label: playerMessage)
-        
-        //hidding the two possible answer buttons
-        firstAnswerButton.hidden = true
-        secondAnswerButton.hidden = true
+        playerActionTasks()
     }
     
     @IBAction func secondActionButton(sender: UIButton) {
-        let message = getSecondButtonMessage()
-        let mutableString = generateMutableAttributedString(message)
+        let mutableString = generateMutableAttributedString(getSecondButtonMessage().message)
+        saveState = getSecondButtonMessage().action
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(saveState, forKey: "saveState")
         startTyping(mutableString, typeSpeed: typeSpeed, label: playerMessage)
-
-        //hidding the two possible answer buttons
-        firstAnswerButton.hidden = true
-        secondAnswerButton.hidden = true
+        playerActionTasks()
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("saveState antes=\(saveState)")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(saveState, forKey: "saveState")
+        print("saveState depois setar defaults=\(saveState)")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         
-        //let initialMessage = "TTTesting keyboard. 123 OMG.. Is this piece of junk really working?"
+        let defaults = NSUserDefaults.standardUserDefaults()
+        saveState = defaults.integerForKey("saveState")
+        
         story=getStory()
-
+        
         npcMessage.font = UIFont(name: "Monaco", size: 16)
         playerMessage.font = UIFont(name: "Monaco", size: 16)
+        gameNameLabel.font = UIFont(name: "Monaco", size: 13)
+        connectedLabel.font = UIFont(name: "Monaco", size: 13)
+        statusLabel.font = UIFont(name: "Monaco", size: 13)
         view.backgroundColor = UIColor.grayColor()
-        
         
         self.playerMessage.text = ""
         self.npcMessage.text = ""
-        
-        firstAnswerButton.setTitle(getFirstButtonMessage(), forState: UIControlState.Normal)
-        secondAnswerButton.setTitle(getSecondButtonMessage(), forState: UIControlState.Normal)
-        
+        nextButton.hidden = true
+        firstAnswerButton.setTitle(getFirstButtonMessage().message, forState: UIControlState.Normal)
+        secondAnswerButton.setTitle(getSecondButtonMessage().message, forState: UIControlState.Normal)
         
         npcMessage.textAlignment = .Left
         npcMessage.adjustsFontSizeToFitWidth = true
@@ -67,7 +86,6 @@ class ViewController: UIViewController {
         let mutableString = generateMutableAttributedString(getNpcMessage())
         
         startTyping(mutableString, typeSpeed: typeSpeed, label: npcMessage)
-        
     }
     
     func generateMutableAttributedString(inputString: String) -> NSMutableAttributedString {
@@ -79,32 +97,43 @@ class ViewController: UIViewController {
     func getNpcMessage() -> String {
         let line1 = story["story"][saveState]["line1"].string
         let line2 = story["story"][saveState]["line2"].string
-//        let actualState = story[saveState+1].dictionaryObject
-//        print(actualState!["line1"] as! String)
-        print(story["story"][saveState])
-        
+
         return line1! + " " + line2!
     }
     
     
-    func getFirstButtonMessage() -> String {
+    func getFirstButtonMessage() -> (message: String, action: Int) {
         let line1 = story["story"][saveState]["optionOneTextline1"].string
         let line2 = story["story"][saveState]["optionOneTextline2"].string
-        //        let actualState = story[saveState+1].dictionaryObject
-        //        print(actualState!["line1"] as! String)
-        //        print(actualState)
+        let action = story["story"][saveState]["optionOneway"].number
         
-        return line1! + " " + line2!
+        let max = 5
+        if action?.integerValue == max {
+            saveState = 0
+        } else {
+            saveState = (action?.integerValue)!
+        }
+        
+        let message = line1! + " " + line2!
+        return (message, action as! Int)
     }
 
-    func getSecondButtonMessage() -> String {
+    func getSecondButtonMessage()-> (message: String, action: Int) {
         let line1 = story["story"][saveState]["optionTwoTextline1"].string
         let line2 = story["story"][saveState]["optionTwoTextline2"].string
-        //        let actualState = story[saveState+1].dictionaryObject
-        //        print(actualState!["line1"] as! String)
-        //        print(actualState)
+        let action = story["story"][saveState]["optiontwoway"].number
+
+        let max = 5
+        if action?.integerValue == max {
+            saveState = 0
+        } else {
+            saveState = (action?.integerValue)!
+        }
         
-        return line1! + " " + line2!
+
+        
+        let message = line1! + " " + line2!
+        return (message, action as! Int)
     }
     
     func getStory() -> JSON {
@@ -126,10 +155,31 @@ class ViewController: UIViewController {
         return JSON.null
     }
     
+    func playerActionTasks(){
+
+        //hidding the two possible answer buttons. Showing the "Next" button
+        firstAnswerButton.hidden = true
+        secondAnswerButton.hidden = true
+        nextButton.hidden = false
+
+        //Saves the current state
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(saveState, forKey: "saveState")
+    }
+    
+    func reNew(){
+        //reload application data (renew root view)
+        UIApplication.sharedApplication().keyWindow?.rootViewController = storyboard!.instantiateViewControllerWithIdentifier("Main")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+protocol MainViewDelegate {
+    func viewString() -> String;
 }
 
