@@ -3,7 +3,7 @@ Text-only Game for the Hackathon
 
 ![alt tag](https://raw.githubusercontent.com/luizdias/terminal329x/initial-launch/screenshots/gallery1.png)
 
-Initial screen             |   Gameplay
+Splash screen / Logo            |   Gameplay
 :-------------------------:|:-------------------------:
 ![alt tag](https://raw.githubusercontent.com/luizdias/terminal329x/initial-launch/screenshots/gallery2.jpg)  |  ![alt tag](https://raw.githubusercontent.com/luizdias/terminal329x/initial-launch/screenshots/gallery3.jpg)
 
