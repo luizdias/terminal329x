@@ -1,5 +1,13 @@
 # terminal329x
-Simple Game for the Hackathon
+Text-only Game for the Hackathon
+
+![alt tag](https://raw.githubusercontent.com/luizdias/terminal329x/initial-launch/screenshots/gallery1.png)
+
+Initial screen             |   Gameplay
+:-------------------------:|:-------------------------:
+![alt tag](https://raw.githubusercontent.com/luizdias/terminal329x/initial-launch/screenshots/gallery2.jpg)  |  ![alt tag](https://raw.githubusercontent.com/luizdias/terminal329x/initial-launch/screenshots/gallery3.jpg)
+
+
 
 **Inspiration**
 Our inspiration was to made a game that is different from what we see in the market, we tried to create a immersive story where the player actions change the flow and also how the game ends.
